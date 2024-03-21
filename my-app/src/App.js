@@ -1,22 +1,24 @@
-import { useState } from 'react';
+import  { useState } from'react';
 
- function MyInput() {
-  const [text, setText] = useState('hei');
+function Form() {
+  const [isim, setIsim] = useState('Tom');
+  const [yas, setYas] = useState(48);
 
-  function handleChange(e) { setText(e.target.value)
-  }
 
-  return (
+  return(
     <>
-      <input type='text' value={text} onChange={handleChange} />
-      <p> Yazilan metin {text}</p>
-     <button onClick={() => setText('Merhaba')}> Sifirla</button>
+    <input value={isim}
+    onChange={(e) => setIsim(e.target.value)}
+    />
     
+<button onClick={() => setYas (yas+1)}>
+  yasi arttir
+</button>
+    <p>Hi {isim}  You are {yas} years old</p>
     </>
-  );
+  )
 }
 
 
 
-
-export default MyInput
+export default Form
