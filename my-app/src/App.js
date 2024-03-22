@@ -7,12 +7,17 @@ function Form() {
 
   return(
     <>
+    <div>
     <input value={isim}
     onChange={(e) => setIsim(e.target.value)}
     />
-    
-<button onClick={() => setYas (yas+1)}>
-  yasi arttir
+ </div>   
+<button onClick={() => setYas (yas+3) }>
+  yasi 3 arttir
+</button>
+
+<button onClick={() => setYas (yas+1) }>
+  yasi 1  arttir
 </button>
     <p>Hi {isim}  You are {yas} years old</p>
     </>
